@@ -1,0 +1,29 @@
+{
+    "name": "shel/neos-rangeeditor",
+    "type": "neos-plugin",
+    "description": "A plugin for Neos CMS which provides a numeric range editor",
+    "license": "GPL-3.0",
+    "keywords": [
+        "neos",
+        "neoscms",
+        "flow",
+        "editor"
+    ],
+    "authors": [
+        {
+            "name": "Sebastian Helzle",
+            "email": "sebastian@helzle.it",
+            "homepage": "https://www.helzle.it",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "neos/neos": "^5.3 || ^7.0",
+        "neos/neos-ui": "^5.3 || ^7.0"
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Shel.Neos.RangeEditor"
+        }
+    }
+}

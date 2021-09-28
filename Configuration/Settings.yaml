@@ -1,0 +1,10 @@
+Neos:
+  Neos:
+    Ui:
+      resources:
+        javascript:
+          Shel.Neos:RangeEditor:
+            resource: resource://Shel.Neos.RangeEditor/Public/RangeEditor/Plugin.js
+        stylesheets:
+          Shel.Neos:RangeEditor:
+            resource: resource://Shel.Neos.RangeEditor/Public/RangeEditor/Plugin.css

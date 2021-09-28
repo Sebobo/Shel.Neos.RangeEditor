@@ -1,0 +1,34 @@
+{
+    "description": "Shel.Neos.RangeEditor:RangeEditor",
+    "license": "proprietary",
+    "private": true,
+    "engines": {
+        "node": ">=14"
+    },
+    "scripts": {
+        "build": "NODE_ENV=production neos-react-scripts build",
+        "watch": "neos-react-scripts watch"
+    },
+    "devDependencies": {
+        "@neos-project/eslint-config-neos": "^2.3.0",
+        "@neos-project/neos-ui-extensibility": "^5.3.9",
+        "@neos-project/react-ui-components": "^5.3.9",
+        "eslint": "^7.16.0",
+        "eslint-config-prettier": "^7.1.0",
+        "eslint-plugin-prettier": "^3.3.0",
+        "eslint-plugin-react": "^7.21.5",
+        "eslint-plugin-react-hooks": "^4.2.0",
+        "eslint-plugin-testcafe": "^0.2.1",
+        "webpack": "^4.41.5",
+        "react": "^16.14.0",
+        "@types/react": "^16.14.0",
+        "@typescript-eslint/eslint-plugin": "^4.11.0",
+        "@typescript-eslint/parser": "^4.11.0"
+    },
+    "browserslist": [
+        "defaults and > 1% and not ie <= 11"
+    ],
+    "neos": {
+        "buildTargetDirectory": "../../../Public/RangeEditor"
+    }
+}

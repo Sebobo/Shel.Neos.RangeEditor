@@ -1,0 +1,67 @@
+.RangeEditor__rangeEditor___21aJB input[type='range'] {
+  -webkit-appearance: none;
+          appearance: none;
+  background: #323232;
+  cursor: pointer;
+  height: 25px;
+  outline: none;
+  width: 100%;
+}
+
+.RangeEditor__rangeEditor___21aJB input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  background: #00adee;
+  border-radius: 5px;
+  box-shadow: 0 0 0 #000, 0 0 0 #0d0d0d;
+  cursor: pointer;
+  height: 20px;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  width: 20px;
+}
+
+.RangeEditor__rangeEditor___21aJB input[type='range']::-moz-range-thumb {
+  appearance: none;
+  background: #00adee;
+  border-radius: 5px;
+  box-shadow: 0 0 0 #000, 0 0 0 #0d0d0d;
+  cursor: pointer;
+  height: 25px;
+  opacity: 0.7;
+  -moz-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  width: 25px;
+}
+
+.RangeEditor__rangeEditorValue___3GwFy {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.RangeEditor__rangeEditorValue___3GwFy > span:first-child,
+.RangeEditor__rangeEditorValue___3GwFy > span:last-child {
+  cursor: default;
+  opacity: 0.7;
+}
+
+.RangeEditor__rangeEditorValue___3GwFy [role='textbox'] {
+  -webkit-appearance: none;
+          appearance: none;
+  background: #323232;
+  border: 0;
+  color: #fff;
+  display: inline-block;
+  padding: 0 0.3rem;
+  text-align: right;
+}
+
+.RangeEditor__rangeEditorValue___3GwFy [role='textbox']:focus {
+  outline: 1px solid #00adee;
+}
+
+
+/*# sourceMappingURL=Plugin.css.map*/
