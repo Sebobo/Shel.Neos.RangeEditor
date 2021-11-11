@@ -98,16 +98,15 @@ class RangeEditor extends React.PureComponent<RangeEditorProps> {
                         {options.unit}
                     </span>
                     <span>
-                        <span
+                        <input
                             title="Current value"
+                            type="text"
                             ref={this.editableRef}
-                            role="textbox"
-                            contentEditable
                             onKeyPress={this.onKeyPress}
                             onInput={this.handleChange}
-                        >
-                            {value}
-                        </span>
+                            value={value}
+                            style={{ width: `${options.max.toString().length}ch` }}
+                        />
                         {options.unit}
                     </span>
                     <span title="Maximum">
