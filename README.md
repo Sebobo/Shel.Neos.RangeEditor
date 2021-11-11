@@ -1,4 +1,4 @@
-# Numeric range editor for Neos CMS    
+# Numeric range editor for Neos CMS
 
 [![Latest Stable Version](https://poser.pugx.org/shel/neos-rangeeditor/v/stable)](https://packagist.org/packages/shel/neos-rangeeditor)
 [![Total Downloads](https://poser.pugx.org/shel/neos-rangeeditor/downloads)](https://packagist.org/packages/shel/neos-rangeeditor)
@@ -11,16 +11,16 @@ The minimum, maximum and step size can be defined and additionally to make it ea
 
 If a certain value should be entered the current value can also be clicked to enter the desired value directly.
 
-## Example           
+## Example
 
-![Range editor in Neos CMS sidebar](Documentation/RangeEditorExample.png)  
+![Range editor in Neos CMS sidebar](Documentation/RangeEditorExample.png)
 
 ## Installation
 
 Run this in your site package
 
     composer require --no-update shel/neos-rangeeditor
-    
+
 Then run `composer update` in your project directory.
 
 ## How to use
@@ -32,7 +32,7 @@ Add a property of type string and configure the editor as seen in this example:
         'Neos.Neos:Content': true
       ui:
         label: 'My text content'
-      properties:    
+      properties:
         textColor:
           type: string
           ui:
@@ -41,18 +41,18 @@ Add a property of type string and configure the editor as seen in this example:
             inspector:
               group: 'text'
               editor: 'Shel.Neos.RangeEditor/RangeEditor'
-              editorOptions: 
+              editorOptions:
                 min: 0
                 max: 100
                 step: 5
-                unit: 'px' 
+                unit: 'px'
 
 ## Contributions
 
-Contributions are very welcome! 
+Contributions are very welcome!
 
 Please create detailed issues and PRs.
-                                               
+
 ## Thx to the sponsor
 
 The initial development of this package was sponsored by [Code Q Web Factory](https://codeq.at/).
