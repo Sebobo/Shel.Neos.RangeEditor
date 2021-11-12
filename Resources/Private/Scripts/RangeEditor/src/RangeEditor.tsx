@@ -16,6 +16,8 @@ interface RangeEditorProps {
         max?: number;
         step?: number;
         unit?: string;
+        minLabel?: string;
+        maxLabel?: string;
     };
 }
 
@@ -29,6 +31,8 @@ class RangeEditor extends React.PureComponent<RangeEditorProps> {
             max: PropTypes.number,
             step: PropTypes.number,
             unit: PropTypes.string,
+            minLabel: PropTypes.string,
+            maxLabel: PropTypes.string,
         }),
     };
 
@@ -38,6 +42,8 @@ class RangeEditor extends React.PureComponent<RangeEditorProps> {
             max: 100,
             step: 1,
             unit: '',
+            minLabel: null,
+            maxLabel: null,
         },
     };
 
@@ -94,8 +100,7 @@ class RangeEditor extends React.PureComponent<RangeEditorProps> {
                 />
                 <div className={theme.rangeEditorValue}>
                     <span title="Minimum">
-                        {options.min}
-                        {options.unit}
+                        {options.minLabel ? options.minLabel : options.min + options.unit}
                     </span>
                     <span>
                         <span
@@ -111,8 +116,7 @@ class RangeEditor extends React.PureComponent<RangeEditorProps> {
                         {options.unit}
                     </span>
                     <span title="Maximum">
-                        {options.max}
-                        {options.unit}
+                        {options.maxLabel ? options.maxLabel : options.max + options.unit}
                     </span>
                 </div>
             </div>
