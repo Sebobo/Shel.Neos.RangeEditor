@@ -9,7 +9,7 @@ import style from './RangeEditor.css';
 
 interface RangeEditorProps {
     theme?: Record<string, string>;
-    value?: string;
+    value?: string | number;
     commit: (value: any) => void;
     options: {
         min?: number;
@@ -21,7 +21,7 @@ interface RangeEditorProps {
 
 class RangeEditor extends React.PureComponent<RangeEditorProps> {
     static propTypes = {
-        value: PropTypes.string,
+        value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
         commit: PropTypes.func.isRequired,
         theme: PropTypes.object,
         options: PropTypes.shape({
