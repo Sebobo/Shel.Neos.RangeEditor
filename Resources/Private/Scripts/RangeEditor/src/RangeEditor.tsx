@@ -9,7 +9,7 @@ import style from './RangeEditor.css';
 
 interface RangeEditorProps {
     theme?: Record<string, string>;
-    value?: string;
+    value?: string | number;
     commit: (value: any) => void;
     options: {
         min?: number;
@@ -23,7 +23,7 @@ interface RangeEditorProps {
 
 class RangeEditor extends React.PureComponent<RangeEditorProps> {
     static propTypes = {
-        value: PropTypes.string,
+        value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
         commit: PropTypes.func.isRequired,
         theme: PropTypes.object,
         options: PropTypes.shape({
@@ -51,13 +51,6 @@ class RangeEditor extends React.PureComponent<RangeEditorProps> {
         value: 0,
     };
 
-    editableRef = null;
-
-    constructor(props) {
-        super(props);
-        this.editableRef = React.createRef();
-    }
-
     componentDidMount() {
         this.setState({ value: this.props.value });
     }
@@ -73,8 +66,6 @@ class RangeEditor extends React.PureComponent<RangeEditorProps> {
 
         this.setState({ value });
         this.props.commit(value);
-
-        this.editableRef.current.innerText = value;
 
         this.forceUpdate();
     };
@@ -103,16 +94,14 @@ class RangeEditor extends React.PureComponent<RangeEditorProps> {
                         {options.minLabel ? options.minLabel : options.min + options.unit}
                     </span>
                     <span>
-                        <span
+                        <input
                             title="Current value"
-                            ref={this.editableRef}
-                            role="textbox"
-                            contentEditable
+                            type="text"
                             onKeyPress={this.onKeyPress}
-                            onInput={this.handleChange}
-                        >
-                            {value}
-                        </span>
+                            onChange={this.handleChange}
+                            value={value}
+                            style={{ width: `${options.max.toString().length}ch` }}
+                        />
                         {options.unit}
                     </span>
                     <span title="Maximum">

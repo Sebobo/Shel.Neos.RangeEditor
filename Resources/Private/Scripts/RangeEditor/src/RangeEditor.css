@@ -44,7 +44,7 @@
   opacity: 0.7;
 }
 
-.rangeEditorValue [role='textbox'] {
+.rangeEditorValue input {
   appearance: none;
   background: #323232;
   border: 0;
@@ -52,8 +52,9 @@
   display: inline-block;
   padding: 0 0.3rem;
   text-align: right;
+  box-sizing: content-box;
 }
 
-.rangeEditorValue [role='textbox']:focus {
+.rangeEditorValue input:focus {
   outline: 1px solid #00adee;
 }
