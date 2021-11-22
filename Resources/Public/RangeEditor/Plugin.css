@@ -48,7 +48,7 @@
   opacity: 0.7;
 }
 
-.RangeEditor__rangeEditorValue___3GwFy input {
+.RangeEditor__rangeEditorValue___3GwFy [role='textbox'] {
   -webkit-appearance: none;
           appearance: none;
   background: #323232;
@@ -57,10 +57,9 @@
   display: inline-block;
   padding: 0 0.3rem;
   text-align: right;
-  box-sizing: content-box;
 }
 
-.RangeEditor__rangeEditorValue___3GwFy input:focus {
+.RangeEditor__rangeEditorValue___3GwFy [role='textbox']:focus {
   outline: 1px solid #00adee;
 }
 
