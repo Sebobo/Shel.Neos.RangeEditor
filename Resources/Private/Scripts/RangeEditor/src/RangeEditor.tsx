@@ -93,7 +93,7 @@ class RangeEditor extends React.PureComponent<RangeEditorProps> {
                             title="Current value"
                             type="text"
                             onKeyPress={this.onKeyPress}
-                            onInput={this.handleChange}
+                            onChange={this.handleChange}
                             value={value}
                             style={{ width: `${options.max.toString().length}ch` }}
                         />
