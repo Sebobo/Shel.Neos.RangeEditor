@@ -45,13 +45,6 @@ class RangeEditor extends React.PureComponent<RangeEditorProps> {
         value: 0,
     };
 
-    editableRef = null;
-
-    constructor(props) {
-        super(props);
-        this.editableRef = React.createRef();
-    }
-
     componentDidMount() {
         this.setState({ value: this.props.value });
     }
@@ -67,8 +60,6 @@ class RangeEditor extends React.PureComponent<RangeEditorProps> {
 
         this.setState({ value });
         this.props.commit(value);
-
-        this.editableRef.current.innerText = value;
 
         this.forceUpdate();
     };
@@ -101,7 +92,6 @@ class RangeEditor extends React.PureComponent<RangeEditorProps> {
                         <input
                             title="Current value"
                             type="text"
-                            ref={this.editableRef}
                             onKeyPress={this.onKeyPress}
                             onInput={this.handleChange}
                             value={value}
