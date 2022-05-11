@@ -11,6 +11,8 @@ The minimum, maximum and step size can be defined and additionally to make it ea
 
 If a certain value should be entered the current value can also be clicked to enter the desired value directly.
 
+⚠️ This plugin is only meant for Neos versions before 7. It has been converted into a [core feature](https://neos.readthedocs.io/en/stable/References/PropertyEditorReference.html#property-type-string-integer-rangeeditor-range-editor-for-selecting-numeric-values) since.
+
 ## Example
 
 ![Range editor in Neos CMS sidebar](Documentation/RangeEditorExample.png)
